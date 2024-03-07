@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orion Entertainment</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/849bc237cd.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body class="body">
+    
+    <nav>
+        <div class="logo">Orion Entertainment</div>
+
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-compass" id="btn"></i>
+            <i class="fas fa-angle-double-left" id="cancel"></i>
+        </label>
+
+        <nav class="sidebar">
+        <div class="sidebar header"></div>
+           
+            <ul>
+                <li><a href="#" class="pap-btn"><i class="fas fa-calendar-week">&nbsp PAP</i><span class="fas fa-caret-right"></span></a></li>
+                <ul class="pap-show"> 
+                    <li><a href="Agradecimentos.html"><i class=""> Agradecimentos </i></a></li>
+                    <li><a href="Introducao.html"><i class=""> Introdução     </i></a></li>
+                    <li><a href="Conhecimentosusados.html"><i class=""> Linguagem usada</i></a></li>
+                </ul>
+
+                <li><a href="#" class="fct-btn"><i class="fas fa-calendar-week">&nbsp FCT</i><span class="fas fa-caret-right"></span></a></li>
+                <ul class="fct-show"> 
+                    <li><a href="AprendizagemFCT.html"><i class="">Aprendizagem</i></a></li>
+                    <li><a href="EntidadesP.html"><i class="">Empresas</i></a></li>
+                </ul>
+
+                <li><a href="#" class="curso-btn"><i class="fas fa-calendar-week">&nbsp Curso</i><span class="fas fa-caret-right"></span></a></li>
+                <ul class="curso-show"> 
+                    <li><a href="Aprendizagenscurso.html"><i class="">Aprendizagem</i></a></li>
+                </ul>
+
+                <li><a href="#" class="top-btn"><i class="fas fa-stream"> &nbspGames</i><span class="fas fa-caret-right"></span></a></li>
+                <ul class="top-show">
+                    <li><a href="Gamedownload.html"><i class="fas fa-skull-crossbones"> &nbsp Head ball  </i></a></li>
+                </ul>
+                
+                <li><a href="#" class="soc-btn"><i class="fas fa-at">&nbsp Social Media </i><span class="fas fa-caret-right"></span></a></li>
+                <ul class="soc-show">
+                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/_orion.entertainment_/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+
+                <li><a href="contact.html"><i class="fas fa-envelope">&nbspContact</i></a></li>
+                <li><a href="Aboutus.html"><i class="fas fa-info-circle">&nbsp About Us</i></a></li>
+                
+            </ul>
+        </nav>
+    </nav>
+    <script>
+        $('.top-btn').click(function(){
+            $('nav ul .top-show').toggleClass("show");
+        });
+ 
+        $('.soc-btn').click(function(){
+            $('nav ul .soc-show').toggleClass("show1");
+        });
+        $('.pap-btn').click(function(){
+            $('nav ul .pap-show').toggleClass("show2");
+        });
+        $('.fct-btn').click(function(){
+            $('nav ul .fct-show').toggleClass("show3");
+        });
+        $('.curso-btn').click(function(){
+            $('nav ul .curso-show').toggleClass("show4");
+        });
+ 
+        
+    </script>
+   <br>
+   <br>
+   <br>
+   <style>
+    form {
+        background-color: #3056b5;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        color:black;
+    }
+
+    .two-inputs {
+        display: flex;
+        gap: 16px;
+    }
+
+    .two-inputs input {
+        flex: 1;
+    }
+
+    button {
+        background-color: #271bd4;
+        color: #fff;
+        padding: 15px 50px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+       
+    }
+
+    button:hover {
+        background-color: #126aed;
+        color: #3edff4;
+    }
+    #myButton {
+    display: block;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px 50px;
+}
+    
+</style>
+   <form action="https://formspree.io/f/mnqedbpa" method="POST">
+    <div class="two-inputs">
+        <div>
+            <label class="labelhelp" "primeiroNome">Primeiro Nome:</label>
+            <input type="text" id="Primeiro Nome" name="Primeiro Nome" required>
+        </div>
+
+        <div>
+            <label class="labelhelp" for="ultimoNome">Último Nome:</label>
+            <input type="text" id="Ultimo Nome" name="Ultimo Nome" required>
+        </div>
+    </div>
+
+    <label class="labelhelp" for="email">E-mail:</label>
+    <input type="email" id="E-mail" name="E-mail" required>
+
+    <label class="labelhelp" for="mensagem">Conste o Problema ou deixe a sua opinião:</label>
+    <textarea id="Mensagem" name="Mensagem" rows="4"></textarea>
+    <button type="submit">Enviar</button> <div class="buttonsubmit"></div>
+</form>
+<br>
+<a href="index.html"><button id="myButton">Voltar para a Página principal</button></a>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orion Entertainment</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/849bc237cd.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body class="body">
+    
+    <nav>
+        <div class="logo">Orion Entertainment</div>
+        <div class="search-box">
+            <input type="text" id="search-input" class="search-txt" placeholder="Search">
+            <button type="submit">
+            </button>
+
+            <a href="#" class="search-btn" id="search-btn">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-compass" id="btn"></i>
+            <i class="fas fa-angle-double-left" id="cancel"></i>
+        </label>
+
+        <nav class="sidebar">
+        <div class="sidebar header"></div>
+           
+            <ul>
+                <li><a href="#" class="pap-btn"><i class="fas fa-calendar-week">&nbsp PAP</i><span class="fas fa-caret-right"></span></a></li>
+                <ul class="pap-show"> 
+                    <li><a href="Agradecimentos.html"><i class=""> Agradecimentos </i></a></li>
+                    <li><a href="Introducao.html"><i class=""> Introdução     </i></a></li>
+                    <li><a href="Conhecimentosusados.html"><i class="">  Construção</i></a></li>
+                </ul>
+
+                <li><a href="#" class="fct-btn"><i class="fas fa-calendar-week">&nbsp FCT</i><span class="fas fa-caret-right"></span></a></li>
+                <ul class="fct-show"> 
+                    <li><a href="AprendizagemFCT.html"><i class="">Aprendizagem</i></a></li>
+                    <li><a href="EntidadesP.html"><i class="">Empresas</i></a></li>
+                </ul>
+
+                <li><a href="#" class="curso-btn"><i class="fas fa-calendar-week">&nbsp Curso</i><span class="fas fa-caret-right"></span></a></li>
+                <ul class="curso-show"> 
+                    <li><a href="Aprendizagenscurso.html"><i class="">Aprendizagem</i></a></li>
+                </ul>
+
+                <li><a href="#" class="top-btn"><i class="fas fa-stream"> &nbspGames</i><span class="fas fa-caret-right"></span></a></li>
+                <ul class="top-show">
+                    <li><a href="Gamedownload.html"><i class="fas fa-skull-crossbones"> &nbsp Head ball  </i></a></li>
+                </ul>
+                
+                <li><a href="#" class="soc-btn"><i class="fas fa-at">&nbsp Social Media </i><span class="fas fa-caret-right"></span></a></li>
+                <ul class="soc-show">
+                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/_orion.entertainment_/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+
+                <li><a href="contact.html"><i class="fas fa-envelope">&nbspContact</i></a></li>
+                <li><a href="Aboutus.html"><i class="fas fa-info-circle">&nbsp About Us</i></a></li>
+                
+            </ul>
+        </nav>
+    </nav>
+    <script>
+        $('.top-btn').click(function(){
+            $('nav ul .top-show').toggleClass("show");
+        });
+ 
+        $('.soc-btn').click(function(){
+            $('nav ul .soc-show').toggleClass("show1");
+        });
+        $('.pap-btn').click(function(){
+            $('nav ul .pap-show').toggleClass("show2");
+        });
+        $('.fct-btn').click(function(){
+            $('nav ul .fct-show').toggleClass("show3");
+        });
+        $('.curso-btn').click(function(){
+            $('nav ul .curso-show').toggleClass("show4");
+        });
+ 
+        document.getElementById('search-input').addEventListener('keydown', function (e) {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                realizarPesquisa();
+            }
+        });
+ 
+        document.getElementById('search-btn').addEventListener('click', function () {
+            realizarPesquisa();
+        });
+ 
+        function realizarPesquisa() {
+            var searchTerm = document.getElementById('search-input').value;
+            var encodedSearchTerm = encodeURIComponent(searchTerm);
+            var urlMapping = {
+
+                'Contact' : 'Contact.html', 'Ajuda' : 'Contact.html', 'contato' : 'Contact.html',    
+                'contact' : 'Contact.html',  'Contatos' : 'Contact.html', 'Contato' : 'Contact.html', 
+                'contacto' : 'Contact.html', 'contatos' : 'Contact.html',                                    //barra pesquisa para o help
+                'Contacto' : 'Contact.html',  'contatos' : 'Contact.html',
+                'ajuda' : 'Contact.html', 'help' : 'Contact.html', 'Help' : 'Contact.html', 
+
+                'Forest Nightmare':'Gamedownload.html','forest nightmare':'Gamedownload.html',
+                'download jogo':'Gamedownload.html', 'baixar jogo':'Gamedownload.html',                      //download jogo
+                'pesadelo da floresta':'Gamedownload.html','Pesadelo da floresta':'Gamedownload.html',
+                'Pesadelo da Floresta':'Gamedownload.html','download ':'Gamedownload.html','Download ':'Gamedownload.html',
+              
+                'conhecimentos': 'Conhecimentosusados.html','o que usei na pap': 'Conhecimentosusados.html'
+               ,'Conhecimentos': 'Conhecimentosusados.html',  'O que usei na pap': 'Conhecimentosusados.html',                                                   //o q foi usado na pap linguagem etc
+
+              'o que aprendi na fct ': 'AprendizagemFCT.html','o que aprendi na fct ': 'AprendizagemFCT.html',
+              'o que foi feito na fct ': 'AprendizagemFCT.html','O que aprendi na fct ': 'AprendizagemFCT.html',  //fct apdz
+              'Aprendizagem FCT': 'AprendizagemFCT.html','aprendizagem fct  ': 'AprendizagemFCT.html',
+              'conhecimentos FCT': 'AprendizagemFCT.html','conhecimentos fct': 'AprendizagemFCT.html',
+              'FCT Aprendizagem ': 'AprendizagemFCT.html','fct aprendizagem': 'AprendizagemFCT.html',
+              'FCT conhecimentos': 'AprendizagemFCT.html','fct conhecimentos': 'AprendizagemFCT.html',
+
+               'empresa': 'Aboutus.html','Empresa': 'Aboutus.html' ,'missão': 'Aboutus.html' ,'objetivos': 'Aboutus.html' , //abt us
+               'Missão': 'Aboutus.html' ,'Objetivos': 'Aboutus.html',  
+
+
+               'agradecimentos' : 'Agradecimentos.html', 'Agradecimentos' : 'Agradecimentos.html', 'agradecer' : 'Agradecimentos.html',
+               'Agradecer' : 'Agradecimentos.html',  //agradecer 
+
+
+               'estagio' : 'EntidadesP.html','Estagio' : 'EntidadesP.html','estagios' : 'EntidadesP.html','Estagios' : 'EntidadesP.html',
+               'Empresa' : 'EntidadesP.html','empresa' : 'EntidadesP.html','Empresas' : 'EntidadesP.html','empresas' : 'EntidadesP.html',//empresasfct
+
+               'Projeto': 'Introducao.html','projeto': 'Introducao.html','idea': 'Introducao.html','Idea': 'Introducao.html',
+               'Pap': 'Introducao.html','pap': 'Introducao.html','ideas': 'Introducao.html','Ideas': 'Introducao.html', //introducao
+   
+               'home': 'index.html','Home': 'index.html', //index
+   
+            };
+ 
+            if (searchTerm in urlMapping) {
+                var urlDestino = urlMapping[searchTerm];
+                window.location.href = urlDestino + '?pesquisa=' + encodedSearchTerm;
+            }
+            else {
+                window.location.href = 'resultados?pesquisa=' + encodedSearchTerm;
+            }
+        }
+    </script>
+       <br>
+       <div class="txttitle">Sobre o curso</div>
+       <div class="txtgeral">Os cursos profissionais conferem uma equivalência escolar ao 12.º ano e uma qualificação de nível 4 do Quadro Nacional de Qualificações, tendo como finalidade principal, a integração no mundo do trabalho. Estes cursos possibilitam aos jovens o prosseguimento de estudos no ensino superior e têm a duração de três anos. As disciplinas estão agrupadas em três componentes de formação (sociocultural, científica e tecnológica), organizadas segundo uma estrutura modular e permitem uma maior flexibilidade de acordo com os ritmos diferenciados de aprendizagem dos alunos. Dentro da componente tecnológica insere-se ainda a Formação em Contexto de Trabalho, uma experiência no mundo do trabalho onde os alunos adquirem e demonstram as competências apreendidas. Este é um período fundamental que os prepara para um futuro profissional. A conclusão do curso culmina com a realização e apresentação de um projeto, a Prova de Aptidão Profissional, trabalho este que assume a natureza de projeto transdisciplinar, em que se evidencia uma dimensão teórica, integradora dos saberes adquiridos e uma dimensão prática, em estreita ligação com o contexto de trabalho.</div>
+       <div class="txttitle">Horas de disciplina e FCT</div>
+       <br>
+       <br>
+       <center><img src="./imagens/Plano-Curricular-GPSI-23_24.jpg" width="900" height="500"></center>
+   </body>
+   </html>
+</body>
+</html>
