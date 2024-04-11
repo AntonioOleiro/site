@@ -168,7 +168,6 @@ nav ul li:hover a{
 nav ul a i{
  
 margin-right: 16px;
- 
 }
  
 #check{
@@ -396,7 +395,7 @@ left: 0;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    margin-top: 2%;
+    margin-top: 5%;
     margin-left: 5%;
   
   }
