@@ -386,3 +386,20 @@ left: 0;
     width: 200px;
     height: 100%;
 }
+.blue-button {
+
+    background-color: #002F52;
+    color: #FFFFFF;
+    border: none;
+    padding:20px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 5%;
+  
+  }
+  .blue-button:hover {
+    background-color: #032e4d;
+  
+  }
