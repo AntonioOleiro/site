@@ -146,10 +146,72 @@
                 window.location.href = 'resultados?pesquisa=' + encodedSearchTerm;
             }
         }
+               var slideIndex = 1;
+               showSlides(slideIndex);
+
+               function plusSlides(n) {
+              showSlides(slideIndex += n);
+              }
+
+              function currentSlide(n) {
+              showSlides(slideIndex = n);
+              }
+
+             function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+           }
+           for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" active", "");
+           }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+ 
+}
+
     </script>
     <div class="txttitle">Sobre o jogo </div>
     <div class="txtgeral">O jogo desenvolvido denominado de Collored Ball Contest é com bases 3D a simular estilo 2D ,foi desenvolvido com o objetivo de dar a conhecer a sua paixão pelo desporto (futebol) e para tentar motivar as outras pessoas a fazer desporto </div>
+    <br>
+    <br>
+    <div class="slideshow-container">
 
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./imagens-3/jogo 1.jpg" style="width:100%">
+            <div class="text">1</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./imagens-3/jogo2.jpg" style="width:100%">
+            <div class="text">2</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./imagens-3/jogo3.jpg" style="width:100%">
+            <div class="text">3</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script src="script.js"></script>
     <div class="txttitle">Download</div>
     <br>
     <br>
